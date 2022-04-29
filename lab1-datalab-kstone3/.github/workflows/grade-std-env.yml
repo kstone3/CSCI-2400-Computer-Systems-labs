@@ -1,0 +1,9 @@
+name: grade-std-env
+on: [push]
+jobs:
+  run-std-env:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shogo82148/actions-setup-perl@v1
+      - run: perl driver.pl -g 13
